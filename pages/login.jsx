@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Layout from '../components/Layout';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
+import authContext from '../context/auth/authContext';
+
 
 const Login = () => {
+
+  // Definir context
+  const AuthContext = useContext(authContext);
+  const {iniciarSesion, mensaje} = AuthContext;
+
 
    //formulario y validacion de formik y yup
 
@@ -20,7 +27,7 @@ const Login = () => {
                .required('El password nes obligatorio')
    }),
    onSubmit: (valores) => {
-     console.log(valores);
+    iniciarSesion(valores);
    }
  })
 
