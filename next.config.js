@@ -1,6 +1,6 @@
 module.exports = {
    env: {
-      backendURL: 'http://localhost:4000',
-      frontendURL: 'http://localhost:3000'
+      backendURL: 'https://shielded-brushlands-93508.herokuapp.com/',
+      frontendURL: 'https://next-js-send-24tu4urk4.vercel.app/'
    }
 }
